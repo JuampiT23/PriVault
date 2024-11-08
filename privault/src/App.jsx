@@ -1,9 +1,8 @@
+import Title from './components/Title/Title'
 import NavBar from "./components/NavBar/NavBar";
-// import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-// import CartWidget from "./components/CartWidget/CartWidget";
-// import Title from './components/Title/Title'
+import CartWidget from "./components/CartWidget/CartWidget";
 import Card from './components/Card/Card' 
-import { useEffect, useState } from 'react'
+// import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import './App.css'
 
 function App() {
@@ -11,7 +10,13 @@ function App() {
   return (
     <>
       <div>
-      <NavBar />
+      <Title />
+      </div>
+      <div>
+      <NavBar /><CartWidget />
+      </div>
+      <div>
+      
       </div>
       <div className="container mt-5 mb-5 ">
       <div className="row">

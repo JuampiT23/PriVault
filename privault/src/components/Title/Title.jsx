@@ -1,4 +1,4 @@
-function Title (props){
+const Title = () => {
     return(
         <h1>PriVault</h1>
 )}
