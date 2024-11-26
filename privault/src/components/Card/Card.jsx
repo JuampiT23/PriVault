@@ -1,13 +1,17 @@
-const Card = ({ titulo, descripcion }) => {
+import { Link } from "react-router-dom";
+
+const Card = ({product}) => {
     return (
-      <div className="card" style={{ width: '18rem' }}>
-        <img src="..." className="card-img-top" alt="..." />
+      <div className="card" style={{width: "18rem"}}>
+        <img src={product.img} alt={product.name} className="card-img-top" />
         <div className="card-body">
-          <h5 className="card-title">Producto {titulo}</h5>
-          <p className="card-text">Descripción {descripcion}</p>
-          <a href="#" className="btn btn-primary">Sumar al carrito</a>
+            <h2 className="card-title">{product.name}</h2>
+            <p>{product.price}</p>
+            <p>{product.description}</p>
+            <Link to={`/detail/${product.id}`} className="btn btn-primary">Ver detalle</Link>
         </div>
-      </div>
+
+    </div>  
     );
   };
   
