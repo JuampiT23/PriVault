@@ -5,15 +5,15 @@ import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
-    const {categoriaId} = useParams()
+    const {categoriaId: categoryId} = useParams()
 
 
     useEffect(() => {
-        const asyncfunction = categoriaId ? getProductsByCategory : getProducts;
-        asyncfunction(categoriaId)
+        const asyncfunction = categoryId ? getProductsByCategory : getProducts;
+        asyncfunction(categoryId)
         .then(data => setProducts(data))
         
-    }, [categoriaId]);
+    }, [categoryId]);
         
     return (
         <div>
