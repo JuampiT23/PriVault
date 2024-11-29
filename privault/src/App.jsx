@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import Card from './components/Card/Card'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ProductPage from './components/ProductPage/ProductPage'
@@ -19,11 +18,11 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/producto/:productId" element={<ProductPage />} />
-          <Route path="/categoria/:categoryId" element={<ItemDetailContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/detail/:productId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="*" element={<h1>Error 404</h1>} />
+          <Route path="*" element={<h1>Error 404</h1>} /> 
         </Routes>
       </CartProvider>
     </BrowserRouter>

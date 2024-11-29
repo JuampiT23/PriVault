@@ -14,13 +14,13 @@ const NavBar = ()=>{
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/producto">Productos</Link>
+              <Link className="nav-link" to="/category/celular">Telefonos</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category">Categorias</Link>
+              <Link className="nav-link" to="/category/tablet">Tablets</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contacto">Contacto</Link>
+              <Link className="nav-link" to="/category/computer">Notebooks</Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
